@@ -4,7 +4,7 @@ bp = Blueprint('main', __name__, url_prefix='/')
 
 @bp.route('/hello')
 def hello_sesac():
-    return 'Hello, sesac!!'
+    return 'I want to sleep!'
 
 @bp.route('/')
 def index():
