@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>시뮬레이션</h1>
+<label for="category">카테고리:</label>
+<select id="category">
+    <option value="hospital">병원</option>
+    <option value="pharmacy">약국</option>
+    <option value="market">시장/마트</option>
+    <option value="cinema">영화관</option>
+</select>
+<div>질문 리스트</div>
+<label for="user_input">Your Input:</label>
+<input type="text" id="user_input">
+
+<button onclick="simulate()">시뮬레이션</button>
+
+<h2>응답: 여기 뭐넣지?</h2>
+<div id="response"></div>
+
+{% endblock %}
