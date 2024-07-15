@@ -4,3 +4,4 @@ sesac.db
 __pycache__
 migrations
 logs
+.env

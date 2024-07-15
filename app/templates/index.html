@@ -11,7 +11,9 @@
     <option value="market">시장/마트</option>
     <option value="cinema">영화관</option>
 </select>
-<div>질문 리스트</div>
+<button onclick="generateQuestion()" class=btn btn-primary>질문 생성</button>
+<div id="generated_question"></div>
+
 <label for="user_input">Your Input:</label>
 <input type="text" id="user_input">
 
@@ -19,5 +21,19 @@
 
 <h2>응답: 여기 뭐넣지?</h2>
 <div id="response"></div>
+
+<script>
+    function generateQuestion() {
+        var category = $('#category').val();
+        
+        $.ajax({
+            url: '/generate_question/' + category,
+            type: 'GET',
+            success: function(response) {
+                $('#generated_question').text(response);
+            }
+        });
+    }
+</script>
 
 {% endblock %}
